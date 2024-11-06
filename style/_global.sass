@@ -1,0 +1,62 @@
+:where( a, button ):focus-visible
+    background-color: $c-second-lite
+
+body
+    font-family: $font-family
+    font-weight: 400
+    background-color: $c-lite
+    color: $c-medium
+
+.visually-hidden
+    @include visually-hidden
+
+.container
+    $padding-inline: $padding-inline-desctop
+
+    max-width: calc( $site-width + $padding-inline * 2 )
+    padding-inline: $padding-inline
+    margin-inline: auto
+
+.title
+    font-size: 60px
+    color: $c-dark
+    line-height: 1
+
+.subtitle
+    font-size: 40px
+    color: $c-dark-extra
+    line-height: 1
+
+.heading
+    font-size: 30px
+    line-height: 1.16
+    color: $c-dark-extra
+
+.text
+    font-size: 18px
+    line-height: 1.7
+    &_l-height_small
+        line-height: 1.5
+
+.button
+    min-width: 255px
+    color: $c-second-medium
+    font-size: 20px
+    padding: 20px 50px
+    background-color: transparent
+    border: 1px solid $c-second-medium
+    transition: all 0.3s
+    @include hover
+        background-color: $c-second-medium
+        color: $c-lite
+    &:active
+        color: $c-lite
+        background-color: $c-second-dark
+        border-color: $c-second-dark
+
+.link
+    color: $c-dark
+    font-size: 20px
+    line-height: 1.15
+    &_color_second
+        color: $c-second-medium
