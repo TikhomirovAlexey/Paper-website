@@ -43,7 +43,6 @@ body
     color: $c-second-medium
     font-size: 20px
     padding: 20px 50px
-    background-color: transparent
     border: 1px solid $c-second-medium
     transition: all 0.3s
     @include hover
@@ -54,9 +53,22 @@ body
         background-color: $c-second-dark
         border-color: $c-second-dark
 
+.action-button
+    display: flex
+    @include hover
+        color: $c-second-medium
+    &:active
+        color: $c-second-dark
+
 .link
     color: $c-dark
     font-size: 20px
     line-height: 1.15
+    @include hover
+        color: $c-second-medium
+    &:active
+        color: $c-second-dark
     &_color_second
         color: $c-second-medium
+        @include hover
+            color: $c-second-dark

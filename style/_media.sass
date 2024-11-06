@@ -1,0 +1,42 @@
+@media (max-width: 1024px)
+    .header
+        & > .container
+            display: contents
+        &__inner
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, auto)
+        &__nav
+            padding: 10px $padding-inline-desctop
+            order: 1
+            grid-column: 1 / -1
+            border-top: 1px solid $c-lite-another
+        &__logo
+            margin: 2px 0 2px $padding-inline-desctop
+        &__actions
+            margin-right: $padding-inline-desctop
+
+    .nav
+        &__list
+            gap: 12px
+            justify-content: space-between
+
+    .actions
+        justify-self: flex-end
+
+@media (max-width: 690px)
+    .header
+        &__nav
+            padding: 8px $padding-inline-tablet
+            &__logo
+                margin-left: $padding-inline-tablet
+            &__actions
+                margin-right: $padding-inline-tablet
+
+@media (max-width: 510px)
+    .header
+        &__nav
+            padding: 8px $padding-inline-mobile
+            &__logo
+                margin-left: $padding-inline-mobile
+            &__actions
+                margin-right: $padding-inline-mobile

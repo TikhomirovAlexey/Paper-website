@@ -122,7 +122,15 @@ a
     user-select: none
 
 /**
+ Сбрасываем стандартные стили кнопакам, у которых есть класс
+ */
+:where(button[class])
+    background-color: transparent
+    border: none
+
+/**
     убираем стандартную фокус-линию
     */    
 :where( a, button )
     outline: none
+    transition: all 0.3s
