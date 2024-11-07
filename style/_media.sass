@@ -1,42 +1,64 @@
 @media (max-width: 1024px)
+
     .header
         & > .container
             display: contents
         &__inner
             grid-template-columns: repeat(2, 1fr)
             grid-template-rows: repeat(2, auto)
-        &__nav
-            padding: 10px $padding-inline-desctop
-            order: 1
-            grid-column: 1 / -1
-            border-top: 1px solid $c-lite-another
+            gap: 0
         &__logo
-            margin: 2px 0 2px $padding-inline-desctop
-        &__actions
-            margin-right: $padding-inline-desctop
+            margin: $margin-block-logo 0 $margin-block-logo $padding-inline-desctop
 
     .nav
+        padding: 10px $padding-inline-desctop
+        order: 1
+        grid-column: 1 / -1
+        border-top: 1px solid $c-lite-another
         &__list
             gap: 12px
             justify-content: space-between
 
     .actions
+        margin-right: $padding-inline-desctop
         justify-self: flex-end
 
 @media (max-width: 690px)
+
     .header
-        &__nav
-            padding: 8px $padding-inline-tablet
-            &__logo
-                margin-left: $padding-inline-tablet
-            &__actions
-                margin-right: $padding-inline-tablet
+        &__logo
+            margin-left: $padding-inline-tablet
+
+    .nav
+        padding: 8px $padding-inline-tablet
+
+    .actions
+        margin-right: $padding-inline-tablet
 
 @media (max-width: 510px)
+
     .header
-        &__nav
-            padding: 8px $padding-inline-mobile
-            &__logo
-                margin-left: $padding-inline-mobile
-            &__actions
-                margin-right: $padding-inline-mobile
+        &__inner
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(2, auto)
+        &__logo
+            margin-inline: auto
+
+    .nav
+        display: none
+
+    .actions
+        margin-right: 0
+        padding: 10px $padding-inline-mobile
+        border-top: 1px solid $c-lite-another
+        justify-self: stretch
+        display: grid
+        grid-template-columns: 1fr repeat(2, auto)
+        justify-items: flex-start
+
+
+    .action-button
+        &_is-hidden
+            display: flex
+
+

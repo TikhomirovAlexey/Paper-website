@@ -9,7 +9,7 @@
     &__logo
         display: flex
         justify-self: start
-        padding-block: 10px
+        padding-block: $padding-block-logo
     &__action-button
         padding: 8px
 
@@ -22,3 +22,24 @@
 
 .actions
     @include flex(30px)
+
+.mobile-menu
+    padding: 15px
+    background-color: $c-lite-extra
+    height: calc( 100vh - $height-block-logo )
+    width: 100%
+    position: absolute
+    top: $height-block-logo
+    left: 0
+    z-index: 100
+    overflow-y: auto
+    &__action-button
+        padding: 6px
+    &__list
+        margin-top: 22px
+        @include flex-column(30px)
+        align-items: flex-start
+    &__link
+        padding-block: 10px
+        display: block
+        font-size: 18px
