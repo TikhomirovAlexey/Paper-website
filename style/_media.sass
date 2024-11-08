@@ -1,5 +1,8 @@
 @media (max-width: 1024px)
 
+    .title
+        font-size: 50px
+
     .header
         & > .container
             display: contents
@@ -23,7 +26,26 @@
         margin-right: $padding-inline-desctop
         justify-self: flex-end
 
-@media (max-width: 690px)
+    .billboard
+        &__inner
+            padding-block: 65px
+            background-size: 40%
+        &__body
+            max-width: 390px
+
+@media (max-width: 689px)
+
+    .container
+        padding-inline: $padding-inline-tablet
+
+    .title
+        font-size: 38px
+
+    .text
+        font-size: 16px
+
+    .button
+        min-width: 196px
 
     .header
         &__logo
@@ -35,7 +57,29 @@
     .actions
         margin-right: $padding-inline-tablet
 
-@media (max-width: 510px)
+    .billboard
+        &__inner
+            padding-block: 60px
+            background-position: right 100px
+            background-size: 35%
+        &__body
+            max-width: 288px
+
+@media (max-width: 509px)
+
+    .container
+        padding-inline: $padding-inline-mobile
+
+    .title
+        font-size: 30px
+
+    .text
+        &_mobile-small
+            font-size: 14px
+
+    .button
+        font-size: 18px
+        min-width: 144px
 
     .header
         &__inner
@@ -56,9 +100,13 @@
         grid-template-columns: 1fr repeat(2, auto)
         justify-items: flex-start
 
-
     .action-button
         &_is-hidden
             display: flex
 
-
+    .billboard
+        &__inner
+            padding-block: 50px
+            background: none
+        &__body
+            max-width: 100%
