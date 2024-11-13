@@ -236,6 +236,11 @@ body {
   line-height: 1.16;
   color: #666666;
 }
+.heading_small {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
 
 .text {
   font-size: 18px;
@@ -300,6 +305,10 @@ body {
   .link_color_second:hover {
     color: #4946B4;
   }
+}
+
+main > section:nth-of-type(even) {
+  background-color: #EBEBEB;
 }
 
 .header {
@@ -381,9 +390,50 @@ body {
   align-items: flex-start;
 }
 
+.quality {
+  padding-block: 90px;
+}
+.quality__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px 30px;
+}
+
+.paper-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #C0C0C0;
+}
+.paper-card_big {
+  grid-column: 1/-1;
+  border: none;
+  padding-top: 0;
+}
+.paper-card__body {
+  margin-block: auto;
+}
+.paper-card__body_column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.paper-card__img {
+  height: auto;
+}
+.paper-card__img_big {
+  width: clamp(330px, 50.6944444444vw, 730px);
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 50px;
+  }
+  .subtitle {
+    font-size: 30px;
   }
   .header > .container {
     display: contents;
@@ -417,6 +467,15 @@ body {
   .billboard__body {
     max-width: 390px;
   }
+  .quality {
+    padding-block: 60px;
+  }
+  .paper-card {
+    flex-direction: column;
+  }
+  .paper-card_big {
+    flex-direction: row;
+  }
 }
 @media (max-width: 689px) {
   .container {
@@ -424,6 +483,12 @@ body {
   }
   .title {
     font-size: 38px;
+  }
+  .subtitle {
+    font-size: 24px;
+  }
+  .heading_small {
+    font-size: 16px;
   }
   .text {
     font-size: 16px;
@@ -447,6 +512,10 @@ body {
   }
   .billboard__body {
     max-width: 288px;
+  }
+  .paper-card_big {
+    flex-direction: column;
+    row-gap: 20px;
   }
 }
 @media (max-width: 509px) {
@@ -491,5 +560,19 @@ body {
   }
   .billboard__body {
     max-width: 100%;
+  }
+  .quality__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .paper-card {
+    flex-direction: row;
+  }
+  .paper-card_big {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  .paper-card__img_big {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

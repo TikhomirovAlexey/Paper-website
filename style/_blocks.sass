@@ -52,3 +52,28 @@
         max-width: 445px
         @include flex-column(30px)
         align-items: flex-start
+
+.quality
+    padding-block: 90px
+    &__inner
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 90px 30px
+
+.paper-card
+    @include flex(16px, space-between,flex-start)
+    padding-top: 20px
+    border-top: 1px solid $c-medium-extra
+    &_big
+        grid-column: 1 / -1
+        border: none
+        padding-top: 0
+    &__body
+        margin-block: auto
+        &_column    
+            @include flex-column(20px)
+    &__img
+        height: auto
+        &_big
+            @include fluid-block(330, 730)
+        

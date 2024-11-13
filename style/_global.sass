@@ -2,7 +2,7 @@
     background-color: $c-second-lite
 
 :where( a, button)
-        transition: all 0.3s
+    transition: all 0.3s
 
 html
     scrollbar-gutter: stable
@@ -41,6 +41,10 @@ body
     font-size: 30px
     line-height: 1.16
     color: $c-dark-extra
+    &_small
+        font-size: 18px
+        font-weight: 500
+        line-height: 1.5
 
 .text
     font-size: 18px
@@ -84,3 +88,6 @@ body
         color: $c-second-medium
         @include hover
             color: $c-second-dark
+
+main > section:nth-of-type(even)
+        background-color: $c-lite-extra

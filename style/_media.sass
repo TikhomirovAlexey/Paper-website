@@ -3,6 +3,9 @@
     .title
         font-size: 50px
 
+    .subtitle
+        font-size: 30px
+
     .header
         & > .container
             display: contents
@@ -33,6 +36,15 @@
         &__body
             max-width: 390px
 
+    .quality
+        padding-block: 60px
+
+    .paper-card
+        flex-direction: column
+        &_big
+            flex-direction: row
+
+
 @media (max-width: 689px)
 
     .container
@@ -40,6 +52,13 @@
 
     .title
         font-size: 38px
+
+    .subtitle
+        font-size: 24px
+
+    .heading
+        &_small
+            font-size: 16px
 
     .text
         font-size: 16px
@@ -64,6 +83,11 @@
             background-size: 35%
         &__body
             max-width: 288px
+
+    .paper-card
+        &_big
+            flex-direction: column
+            row-gap: 20px
 
 @media (max-width: 509px)
 
@@ -110,3 +134,17 @@
             background: none
         &__body
             max-width: 100%
+
+    .quality
+        &__inner
+            grid-template-columns: 1fr
+            gap: 20px
+
+    .paper-card
+        flex-direction: row
+        &_big
+            margin-top: 40px
+            flex-direction: column
+        &__img
+            &_big
+                width: 100%
