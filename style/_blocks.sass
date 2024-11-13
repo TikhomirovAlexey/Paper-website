@@ -70,10 +70,40 @@
         padding-top: 0
     &__body
         margin-block: auto
-        &_column    
+        &_column
             @include flex-column(20px)
     &__img
         height: auto
         &_big
             @include fluid-block(330, 730)
-        
+
+.other-products
+    padding-block: 90px
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 30px
+
+.other-products-card
+    @include flex-column(20px)
+    justify-content: space-between
+    &__body
+        @include flex-column(8px)
+    &__img-box
+        height: 180px
+        background-color: $c-lite-extra
+        background-repeat: no-repeat
+        background-position-x: center
+        &_container
+            background-image: url('../img/container.png')
+            background-position-y: 22px
+            background-size: 120%
+        &_bag
+            background-image: url('../img/bag.png')
+            background-position-y: 12px
+        &_case
+            background-image: url('../img/case.png')
+            background-position: 12px 12px
+        &_other
+            background-image: url('../img/other-2.png'), url('../img/other-1.png')
+            background-position: right 8px, left 20px
