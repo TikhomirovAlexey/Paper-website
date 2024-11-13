@@ -131,3 +131,35 @@
         margin-bottom: 8px
     &__text
         margin-bottom: 30px
+
+.footer
+    &__logo
+        color: $c-lite
+        display: flex
+    &__inner
+        padding-block: 18px
+        background-color: $c-dark
+    &__body
+        @include flex($j-content: space-between)
+    &__extra
+        background-color: $c-lite
+        @include flex(0, center)
+    &__extra-text
+        font-size: 13px
+        color: $c-dark
+        line-height: 1.15
+        text-transform: uppercase
+        & > span
+            color: $c-medium
+
+.social-list
+    @include flex(10px)
+    &__link
+        @include flex(0, center)
+        width: 40px
+        aspect-ratio: 1
+        color: $c-lite
+        @include hover
+            color: $c-second-lite
+        &:active
+            color: $c-second-dark
