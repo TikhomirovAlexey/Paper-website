@@ -107,3 +107,16 @@
         &_other
             background-image: url('../img/other-2.png'), url('../img/other-1.png')
             background-position: right 8px, left 20px
+
+.partners
+    padding-block: 90px
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+    &__logo
+        max-width: 255px
+        aspect-ratio: 1.8888 / 1
+        @include flex(0, center)
+        border: 1px solid $c-medium-extra
+        padding-inline: 8px
