@@ -36,7 +36,7 @@
         &__body
             max-width: 390px
 
-    .quality, .other-products, .partners
+    .quality, .other-products, .partners, .product__inner
         padding-block: 60px
 
     .paper-card
@@ -57,6 +57,18 @@
                 background-position: center 12px
             &_other
                 background-position: 60% 8px, 40% 20px
+
+    .product
+        & > .container
+            display: contents
+        &__inner
+            padding-left: 40px
+            background-position: right 60px
+            background-size: 50%
+        &__body
+            max-width: 330px
+        &__subtitle
+            margin-bottom: 20px
 
 @media (max-width: 689px)
 
@@ -110,6 +122,19 @@
     .partners
         &__inner
             grid-template-columns: repeat(2, 1fr)
+
+    .product
+        & > .container
+            display: block
+        &__inner
+            min-height: 688px
+            padding-left: 0
+            background-position: center 60px
+            background-size: 90%
+            display: flex
+        &__body
+            max-width: 100%
+            align-self: flex-end
 
 @media (max-width: 509px)
 
@@ -185,4 +210,8 @@
         &__logo
             width: 150px
             scroll-snap-align: start
+
+    .product
+        &__inner
+            min-height: 600px
         

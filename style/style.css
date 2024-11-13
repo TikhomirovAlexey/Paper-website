@@ -497,6 +497,20 @@ main > section:nth-of-type(even) {
   padding-inline: 8px;
 }
 
+.product__inner {
+  padding-block: 114px;
+  background: url("../img/sketchbook.png") right 90px/70% no-repeat;
+}
+.product__body {
+  max-width: 350px;
+}
+.product__subtitle {
+  margin-bottom: 8px;
+}
+.product__text {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 50px;
@@ -536,7 +550,7 @@ main > section:nth-of-type(even) {
   .billboard__body {
     max-width: 390px;
   }
-  .quality, .other-products, .partners {
+  .quality, .other-products, .partners, .product__inner {
     padding-block: 60px;
   }
   .paper-card {
@@ -557,6 +571,20 @@ main > section:nth-of-type(even) {
   }
   .other-products-card__img-box_other {
     background-position: 60% 8px, 40% 20px;
+  }
+  .product > .container {
+    display: contents;
+  }
+  .product__inner {
+    padding-left: 40px;
+    background-position: right 60px;
+    background-size: 50%;
+  }
+  .product__body {
+    max-width: 330px;
+  }
+  .product__subtitle {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 689px) {
@@ -607,6 +635,20 @@ main > section:nth-of-type(even) {
   }
   .partners__inner {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .product > .container {
+    display: block;
+  }
+  .product__inner {
+    min-height: 688px;
+    padding-left: 0;
+    background-position: center 60px;
+    background-size: 90%;
+    display: flex;
+  }
+  .product__body {
+    max-width: 100%;
+    align-self: flex-end;
   }
 }
 @media (max-width: 509px) {
@@ -681,5 +723,8 @@ main > section:nth-of-type(even) {
   .partners__logo {
     width: 150px;
     scroll-snap-align: start;
+  }
+  .product__inner {
+    min-height: 600px;
   }
 }/*# sourceMappingURL=style.css.map */
