@@ -15,9 +15,6 @@
         &:hover
             @content
 
-@mixin fluid-text($min, $max)
-    font-size: clamp(#{$min}px, #{calc( $max / 1440 * 100 )}vw, #{$max}px)
-
 @mixin fluid-block($min, $max)
     width: clamp(#{$min}px, #{calc( $max / 1440 * 100 )}vw, #{$max}px)
 
